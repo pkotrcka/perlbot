@@ -95,7 +95,7 @@ switch ($weatherid) {
     case 804 {$wttr = "is fully cloudy ☁☁☁☁"}
     else {$wttr = "it is unspecified"}
 }
-my $temperature = (($currentdata->{main}->{temp})-273);
+my $temperature = sprintf("%.2f", (($currentdata->{main}->{temp})-273));
 # output
 my $message = "Temperature in ".$cityname." is right now: ".$temperature." ℃ and outside ".$wttr.". Sun ".$sunrise_text." and ".$sunset_text.". Clock says it is ".$clock." where this bot lives.\n";
 
